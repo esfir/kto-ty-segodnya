@@ -2,7 +2,7 @@
 from pathlib import Path
 from PIL import Image
 root = Path(__file__).resolve().parents[1] / 'public' / 'characters'
-for source in sorted(root.glob('*.png')):
+for source in sorted(root.rglob('*.png')):
     with Image.open(source) as image:
         image.save(source.with_suffix('.webp'), 'WEBP', lossless=True, method=6)
         small = image.copy()

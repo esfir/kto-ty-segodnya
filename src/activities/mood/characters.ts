@@ -16,4 +16,4 @@ export const characters: Character[] = [
   { id: 'squirrel', name: 'Белка на турбо-скорости', shortName: 'Турбо-белка', phrase: 'У неё уже десять идей, и все срочно', phraseInImage: true, mood: 'Энергия через край', color: '#ffe8d6' },
   { id: 'fox', name: 'Лис в режиме гения', shortName: 'Лис-гений', phrase: 'Сегодня мой мозг работает на 200%!', phraseInImage: true, mood: 'Всё под контролем', color: '#eae4fc' },
 ]
-export const characterImage = (id: string, small = false) => `${import.meta.env.BASE_URL}characters/${id}${small ? '-small' : ''}.webp`
+export const characterImage = (id: string, small = false, teen = false) => `${import.meta.env.BASE_URL}characters/${teen ? 'teens/' : ''}${id}${small ? '-small' : ''}.webp`
